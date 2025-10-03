@@ -1,0 +1,540 @@
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock title %}
+
+{% block Home %}
+active
+{% endblock Home %}
+
+{% block body %}
+{% load static %}
+{% include "messages.html" %}
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/infotech.jpg' %}" class="d-block w-100" alt="..." height="550px" style="object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Home For all Innovations</h5>
+                <p>Join us as we key into the 5th iR and push the limits of what's possible in technology</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/program2.jpg' %}" class="d-block w-100" alt="..." height="550px" style="object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Future-Ready Solutions and Next-Gen Tech</h5>
+                <p>Discover cutting-edge solutions designed to propel your business into the future.
+                    <br>
+                    Explore the latest advancements and stay ahead of the curve.
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/program1.jpg' %}" class="d-block w-100" alt="..." height="550px" style="object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Transforming Ideas and Seamless Integration</h5>
+                <p>Turn your innovative ideas into reality with our expertise.
+                    <br>
+                    Experience technology that integrates seamlessly into your business.
+                </p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+
+<div class="container mt-3">
+
+
+    <div class="card border-primary mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'images/my_logo.png' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    <p>
+                    <h3 class="text-primary"><b>Our Mission</b></h3>
+                    </p>
+                    <p>
+                        To innovate and push the frontiers of technology,
+                        providing cutting-edge solutions that empower individuals and businesses to thrive in a rapidly
+                        evolving digital landscape.
+                    </p>
+
+                    <p>
+                    <h3 class="text-primary"><b>Our Vision</b></h3>
+                    <p>
+                        to be the global leader in technological innovation,
+                        continuously pushing the frontiers of what is possible to create advanced solutions that empower
+                        businesses and enrich lives worldwide.
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="card border-primary mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'images/program4.jpg' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    <p>
+                    <h3 class="text-primary"><b>ABOUT US</b></h3>
+                    </p>
+                    <p>
+                        Maxify Hub is a leading innovation company in the tech industry, dedicated to exploring the
+                        boundaries of technology...
+                    </p>
+                    </p>
+                    <a href="/about/" class="btn btn-primary">Show More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="class card border-primary mb-3">
+        <p>
+        <h3 class="text-center text-primary"><b>WHAT DO WE OFFER?</b></h3>
+        </p>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/th7.jpeg' %}." class="card-img-top" alt="not_showing">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">WEB DEVELOPMENT</h5>
+                        <p class="card-text">Transform your online presence with Maxify Hub's expert web development
+                            services. We create responsive, user-friendly websites that drive engagement and achieve
+                            your business goals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/mobile app.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">MOBILE APP DEVELOPMENT </h5>
+                        <p class="card-text">Take your business on the go with our cutting-edge mobile app development.
+                            We design and develop apps that provide seamless experiences across all devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/th6.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">UI/UX DESIGN</h5>
+                        <p class="card-text">Enhance user satisfaction with our intuitive UI/UX design services. Maxify
+                            Hub ensures your digital products are not only visually appealing but also easy to navigate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Cyber Security1.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">CYBER SECURITY</h5>
+                        <p class="card-text">Protect your digital assets with Maxify Hub's comprehensive cybersecurity
+                            solutions. We offer robust protection to safeguard your data against threats and breaches.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Cloud Computing.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">DEVOPS AND CLOUD COMPUTING </h5>
+                        <p class="card-text">Maximize efficiency with our DevOps and cloud computing services. We
+                            streamline your operations, ensuring smooth, scalable, and secure cloud integration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Graphic Design.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">GRAPHICS DESIGN</h5>
+                        <p class="card-text">Make a lasting impression with our professional graphics design services.
+                            From logos to marketing materials, Maxify Hub creates visually stunning designs that
+                            represent your brand.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Programming1.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">PROGRAMMING & CONSULTANCY</h5>
+                        <p class="card-text">Leverage our expertise with tailored programming and consultancy services.
+                            Maxify Hub offers innovative solutions to meet your unique business needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Social media management.jpeg' %}" class="card-img-top"
+                        alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">SOCIAL MEDIA MANAGEMENT</h5>
+                        <p class="card-text">Boost your online presence with our social media management. We create and
+                            manage content that engages your audience and builds your brand.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Digital marketing.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">DIGITAL MARKETING</h5>
+                        <p class="card-text">Drive traffic and increase conversions with Maxify Hub's digital marketing
+                            services. Our strategies are designed to enhance your online visibility and grow your
+                            business.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Student management system.jpeg' %}" class="card-img-top"
+                        alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">AUTOMATED MANAGEMENT SYSTEM</h5>
+                        <p class="card-text">Optimize your operations with our automated management systems. We provide
+                            solutions that streamline processes and improve efficiency across your organization.</p>
+                        <p class="card-text">This includes; <br><b>- Student Management System for schools,</b> <br><b>-
+                                Staff Management System,</b> <br> <b>- Parishioners Management System for
+                                Churches,</b><br> <b>- Company and Organization Management System</b> </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Govt Project Management Automation.jpeg' %}" class="card-img-top"
+                        alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">GOVERNMENT PROJECT MANAGEMENT & AUTOMATION</h5>
+                        <p class="card-text">Maxify Hub offers specialized project management and automation services
+                            for government projects, ensuring efficient execution and compliance with regulatory
+                            standards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Kids mentorship program1.jpeg' %}" class="card-img-top"
+                        alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">PROGRAMMING FOR KIDS</h5>
+                        <p class="card-text">Introduce your children to the world of coding with our programming for
+                            kids courses. We offer fun and educational programs to inspire the next generation of tech
+                            innovators.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Business Integration.jpeg' %}" class="card-img-top"
+                        alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">AI-BUSINESS INTEGRATION</h5>
+                        <p class="card-text">Revolutionize your business with AI integration. Maxify Hub helps you
+                            harness the power of artificial intelligence to drive innovation and improve
+                            decision-making.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Virtual Assistant.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">VIRTUAL ASSISTANT</h5>
+                        <p class="card-text">Enhance productivity with our virtual assistant services. Our team provides
+                            reliable support, handling administrative tasks so you can focus on growing your business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card border-warning">
+                    <img src="{% static 'images/Chatbot Integration.jpeg' %}" class="card-img-top" alt="not_showing...">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">CHATBOT INTEGRATION</h5>
+                        <p class="card-text">Improve customer engagement with our chatbot integration services. Maxify
+                            Hub creates intelligent chatbots that provide instant, efficient customer support.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+    <div class="card border-primary mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'images/Service need.jpeg' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    <p>
+                    <h3 class="text-primary"><b>ARE YOU A CLIENT?</b></h3>
+                    </p>
+                    <p>
+                        Are you in need of our services?...
+                    </p>
+                    </p>
+                    <a href="/contact/" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-primary mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'images/Study with us.jpeg' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    <p>
+                    <h3 class="text-primary"><b>STUDY WITH US</b></h3>
+                    </p>
+                    <p>
+                        Do you wish to obtain a skill in tech or introduce your kid to world of Cutting-edge Technology?
+                        ...
+                    </p>
+                    </p>
+                    <a href="/courses/" class="btn btn-primary">Study with us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-primary mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'images/tech newbie1.jpeg' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    <p>
+                    <h3 class="text-primary"><b>A NEWBIE?</b></h3>
+                    </p>
+                    <p>
+                        Are you a newbie who is trying to understand what tech is all about and will really need some
+                        help in choosing/selecting the best tech practise for your development?...
+                    </p>
+                    </p>
+                    <a href="/contact/" class="btn btn-primary">Let's help you</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-primary mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'images/programming5.jpeg' %}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    <p>
+                    <h3 class="text-primary"><b>PROJECTS, BLOGS AND NEWS</b></h3>
+                    </p>
+                    <p>
+                        Do you wish to checkout some of our projects, news and blogs?...
+                    </p>
+                    <p>Please note that we request permission from our client's before displaying the projects we
+                        carried out for them on our blog page. Most of them do prefer to keep their properties
+                        confidential...</p>
+                    </p>
+                    <a href="/blog/" class="btn btn-primary">Checkout our blog page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+
+</div>
+
+
+
+{% endblock body %}
+
+{% block footer %}
+<!-- Footer Section -->
+<footer class="bg-light text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+
+            <!-- Company Information -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">MAXIFY HUB</h5>
+                <p>Exploring the Boundaries of Tech.</p>
+            </div>
+
+            <!-- Links -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">What Else do we offer?</h5>
+                <p>
+                    <a href="/" class="text-white" style="text-decoration: none;">. Software and Data Tech</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">. Civil Structural Engineering</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">. Music and Sound Engineering</a>
+                </p>
+                <p>
+                    <a href="/courses/" class="text-white" style="text-decoration: none;">. Private Mentorship</a>
+                </p>
+                <p>
+                    <a href="https://www.maxifyvtu.com.ng" class="text-white" style="text-decoration: none;">.
+                        Telecommunication</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">. Real Estates</a>
+                </p>
+            </div>
+
+            <!-- Useful Links -->
+            {% comment %} <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful Links</h5>
+                <p>
+                    <a href="/courses/" class="text-white" style="text-decoration: none;">Courses</a>
+                </p>
+                <p>
+                    <a href="/contact/" class="text-white" style="text-decoration: none;">Full Stack Development</a>
+                </p>
+                <p>
+                    <a href="https://wa.me/message/XPFEG6E5MVX7G1/" class="text-white" style="text-decoration: none;">Want to Own a website?</a>
+                </p>
+                <p>
+                    <a href="/contact/" class="text-white" style="text-decoration: none;">Help</a>
+                </p>
+            </div> {% endcomment %}
+
+            <!-- Contact Information -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                <p>
+                    <i class="fas fa-home mr-3"></i> Maxify Hub Complex, Owerri, Imo State, 460106
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> Maxifyhub01@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +234 808 7977 938
+                </p>
+                {% comment %} <p>
+                    <i class="fas fa-print mr-3"></i> +234 808 7977 938
+                </p> {% endcomment %}
+            </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-12">
+                <div class="text-center text-md-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://web.facebook.com/Maximus.bethel/" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://x.com/Maxify_Hub" class="btn-floating btn-sm text-white"
+                                style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="mailto:Maxifyhub01@gmail.com" class="btn-floating btn-sm text-white"
+                                style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/maximusdavid/" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="text-center text-md-center mt-4">
+                    <p class="text-primary">&copy; 2025 MAXIFY HUB. All rights reserved.</p>
+                    <p class="text-primary">Developed by: Maximus .I. David</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% comment %} <!-- Add FontAwesome and Bootstrap CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script> {% endcomment %}
+
+{% endblock footer %}

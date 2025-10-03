@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}
+Attendance
+{% endblock title %}
+
+{% block Attendance %}
+active
+{% endblock Attendance %}
+
+{% block body %}
+
+<div class="container mt-2">
+    <div class="row">
+        <h1 class="text-center bg-primary"> {{user.first_name}} Fill your Attendance</h1>
+        <hr>
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+
+            {% include "messages.html" %}
+            <form action="/attendance/" method="post">{% csrf_token %}
+                <div class="form-group">
+                    <label for="fname"><b>Name</b></label>
+                    <input type="text" class="form-control" value="{{user.first_name}}" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="hidden" name="email" value="{{request.user.email}}" class="form-control" id="email"
+                        placeholder="abc@email_provider.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="date"><b>Date</b></label>
+                    <input type="date" name="date" class="form-control" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="logintime"><b>Login Time</b></label>
+                    <input type="time" name="logintime" class="form-control" id="logintime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="logouttime"><b>Logout Time</b></label>
+                    <input type="time" name="logouttime" class="form-control" id="logouttime" required>
+                </div>
+
+                <hr>
+                <div class="d-grid gap-2 mb-3">
+                    <button type="submit" class="btn btn-primary get-started-btn">Enter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock body %}
+
+
+{% block footer %}
+<!-- Footer Section -->
+<footer class="bg-light text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="text-center text-md-center mt-4">
+                    <p class="text-primary">&copy; 2025 MAXIFY HUB. All rights reserved.</p>
+                    <p class="text-primary">Developed by: Maximus .I. David</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Add FontAwesome and Bootstrap CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+{% endblock footer %}

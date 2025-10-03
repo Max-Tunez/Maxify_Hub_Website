@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block title  %} Signup {% endblock title  %}
+{% block body %}
+{% load socialaccount %}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+            <h1 class="text-center bg-primary">Signup</h1>
+            <hr>
+            <a href="{% provider_login_url 'google' %}">Click Here</a>to Login with<i class="fa-brands fa-google"></i>
+            {% include "messages.html" %}
+            <form action="/auth/signup/" method="post">{% csrf_token %}
+              <fieldset>
+
+                <div>
+                  <label for="name" class="form-label mt-4">Fullname</label>
+                  <input type="text" class="form-control" id="fullname" name="name" placeholder="Place Enter Your Fullname">
+                  <small id="name" class="form-text text-muted">Lastname and Firstname</small>
+                </div>
+                  
+                <div>
+                  <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="Please Enter Your Email">
+                  <small id="exampleInputEmail1" class="form-text text-muted">example@emailprovider.com</small>
+                </div>
+
+                <div>
+                  <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1" placeholder="please create your Password" autocomplete="off">
+                  <small id="passwordHelp" class="form-text text-muted">Password should be at least 6 characters. <br> It should contain at least Uppercase, Lowercase, digit and special character.</small>
+                </div>
+
+                <input type="checkbox" onclick="showPassword()"><span id="sp">Show Password</span><i class="fa-solid fa-eye"></i>
+                <br>
+                <small>Password must include atleast [1-9][a-z][A-Z][_-@!#$%^&*)(]& 5 characters</small>
+
+                <div>
+                  <label for="exampleInputConfirmPassword1" class="form-label mt-4">Confirm Password</label>
+                  <input type="password" class="form-control" id="exampleInputConfirmPassword1" name="exampleInputConfirmPassword1" placeholder="Please Re-Enter Password" autocomplete="off">
+                </div>
+
+                <!-- <div>
+                <fieldset>
+                  <legend class="mt-4">What Section are you Interested in?</legend>
+                  <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Tech
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked="1">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Constructions
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Sound Engineering
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Music
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Fashion Design
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Private Mentorship
+                  </label>
+                </div>
+                
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Virtual Top Up
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="mt-4">What is your Status</legend>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Self Sponsored</label>
+                </div>
+
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Dependent</label>
+                </div>
+              </fieldset> -->
+
+              <button type="submit" class="btn btn-primary">Signup</button>
+              <br>
+              <h7>already have an account?<a href="/auth/login/">Login</a></h7>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+
+{% endblock body %}
+{% block script %}
+<script>
+  console.log("working")
+
+  function showPassword(){
+    var x = document.getElementById("exampleInputPassword1");
+    var z = document.getElementById("exampleInputConfirmPassword1");
+    var y = document.getElementById("sp");
+    if (x.type ==="password" && z.type==="password") {
+      x.type = "text";
+      z.type="text";
+      y.innerText="Hide Password";
+    } else {
+      x.type = "password";
+      z.type="password";
+      y.innerText="Show Password";
+    }
+  }
+</script>
+      
+{% endblock script %}
+
+{% block footer %}
+<!-- Footer Section -->
+<footer class="bg-light text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="text-center text-md-center mt-4">
+                    <p class="text-primary">&copy; 2025 MAXIFY HUB. All rights reserved.</p>
+                    <p class="text-primary">Developed by: Maximus .I. David</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Add FontAwesome and Bootstrap CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+{% endblock footer %}

@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  {% block style %}
+
+  {% endblock style %}
+
+
+  <title>Maxify Hub
+    - {% block title %}
+
+    {% endblock title %}
+
+  </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="{% static 'images/my_logo.png' %}" class="img-fluid rounded-start"
+          alt="..." width="200px" height="250px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link {% block Home %}
+                  
+                {% endblock Home %}" href="/">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% block About %}
+                  
+                {% endblock About %}" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% block Contact %}
+                  
+                {% endblock Contact %}" href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% block Courses %}
+                  
+                {% endblock Courses %}" href="/courses">Courses</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% block Enroll %}
+                  
+                {% endblock Enroll %}" href="/enroll/">Enroll</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% block Blog %}
+                  
+                {% endblock Blog %}" href="/blog/">Projects and Blogs</a>
+          </li>
+
+
+          {% if not request.user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/auth/signup/" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="False">Sign in</a>
+            <ul class="dropdown-menu">
+              <a class="dropdown-item" href="/auth/signup/">Signup</a>
+              <a class="dropdown-item" href="/auth/login/">Login</a>
+            </ul>
+          </li>
+
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/auth/logout/" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="False">Welcome {{user.first_name}}</a>
+            <ul class="dropdown-menu">
+              <a class="dropdown-item" href="/candidateprofile/">{{user.first_name}}'s Profile</a>
+              <a class="dropdown-item" href="/auth/logout/">Logout</a>
+              <a class="dropdown-item" href="/auth/request-reset-email/">Reset Password</a>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% block Attendance %}
+                  
+                {% endblock Attendance %}" href="/attendance/">Attendance</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% block Dashboard %}
+                  
+                {% endblock Dashboard %}" href="/dashboard/">{{user.first_name}}'s Dashboard</a>
+          </li>
+
+
+          {% endif %}
+
+
+        </ul>
+
+        <ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">General Services</a>
+            <ul class="dropdown-menu">
+              <a class="dropdown-item" href="/">Software, Data and Technology [Maxify Hub]</a>
+              <a class="dropdown-item" href="/">Civil Structural Engineering [Maxify Hub Constructions]</a>
+              <a class="dropdown-item" href="/">Real Estates [Maxify Hub Real_Estates]</a>
+              <a class="dropdown-item" href="/">Sound Engineering [Maxify Hub Sounds]</a>
+              <a class="dropdown-item" href="/">Music [Maxify Hub Tunez]</a>
+              <a class="dropdown-item" href="/">Fashion Design [Maxify Hub Designs]</a>
+              <a class="dropdown-item" href="/courses/">Private Mentorship [Maxify Hub Courses]</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://www.maxifyvtu.com.ng">Virtual Top-up [Maxify Hub VTU]</a>
+            </ul>
+          </li>
+        </ul>
+
+
+
+        <form class="d-flex" action="/search/" method="get">
+          <input class="form-control me-sm-2" type="search" placeholder="Search" name="search">
+          <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+    <!-- WhatsApp icon -->
+    <a href="https://wa.me/+2348087977938" class="whatsapp_widget" target="_blank">
+      <div class="whatsapp_content">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+        <div class="whatsapp-text-container">
+          <span class="whatsapp-title">Chat with us</span>
+          <span class="whatsapp-subtitle">We are just a click away</span>
+        </div>
+      </div>
+    </a>
+  {% block body %}
+
+  {% endblock body %}
+
+
+
+  {% block script %}
+
+  {% endblock script %}
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+<br>
+<br>
+<br>
+
+{% block footer %}
+
+{% endblock footer %}
+
+
+
+
+</html>

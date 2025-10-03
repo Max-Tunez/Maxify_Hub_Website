@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}
+About US
+{% endblock title %}
+
+{% block About %}
+active
+{% endblock About %}
+{% load static %}
+
+{% block body %}
+<!-- <div class="container">
+    <div class="card border-primary mb-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h4 class="card-title">WELCOME TO THE ABOUT PAGE</h4>
+            <p class="card-text">
+
+            </p>
+        </div>
+    </div>
+</div> -->
+
+
+<br>
+<br>
+<div class="container">
+    <div class="card border-primary mb-3">
+        <h3 class="card-header text-primary">ABOUT MAXIFY HUB</h3>
+        <div style="position: relative; width: 100%; height: 500px;">
+            <img src="{% static 'images/th5.jpeg' %}" class="d-block user-select-none" width="100%" height="600"
+                alt="Image cap">
+        </div>
+
+        <div class="card-body">
+            <p class="card-text">
+            <p>
+                Maxify Hub is a leading innovation company in the tech industry, dedicated to exploring the
+                boundaries of technology.
+            </p>
+            
+            <p>
+                At Maxify Hub, we believe that the future is shaped by those who dare to push the limits,
+                and we are committed to being at the forefront of this technological revolution.
+            </p>
+            <p>
+                Our team of experts is passionate about delivering future-ready solutions that are tailored to meet the
+                unique needs of our clients.
+                From seamless software integration to groundbreaking AI and machine learning applications, Maxify Hub is
+                your partner in navigating the ever-evolving tech landscape.
+                We pride ourselves on our ability to transform ideas into reality, turning visionary concepts into
+                functional, impactful technologies.
+            </p>
+            <p>
+                Innovation is at the heart of everything we do.
+                We are constantly exploring new frontiers, driven by a relentless pursuit of excellence.
+                Our state-of-the-art solutions are designed to enhance efficiency, streamline processes, and unlock new
+                possibilities for growth.
+                With Maxify Hub, you gain access to the tools and technologies that will propel your business into the
+                future.
+            </p>
+            <p>
+                Join us on this exciting journey as we continue to explore the boundaries of tech.
+                Maxify Hub is where innovation meets implementation, and where your technological aspirations become a
+                reality.
+                Discover the difference with Maxify Hub, and let's build a brighter, more innovative future together.
+            </p>
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Are you excited with what you've seen so far?</li>
+            <li class="list-group-item">Do you wish to Join us? Feel free to explore our Courses with the link below.</li>
+            <li class="list-group-item">Are you a Client that needs our services? Contact us with the link below with your phone number and job description </li>
+            <li class="list-group-item">Want to know more about our services and other services we offer? Feel free to peruse Our Home Page and footer section </li>
+        </ul>
+        <div class="card-body">
+            <a href="/courses/" class="card-link">Explore Our Courses</a>
+            <a href="/contact/" class="card-link">A Client? Click to Contact us</a>
+            <a href="/" class="card-link">Want to know what else we offer?</a>
+        </div>
+    </div>
+    
+</div>
+
+
+{% endblock body %}
+
+{% block footer %}
+<!-- Footer Section -->
+<footer class="bg-light text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="text-center text-md-center mt-4">
+                    <p class="text-primary">&copy; 2025 MAXIFY HUB. All rights reserved.</p>
+                    <p class="text-primary">Developed by: Maximus .I. David</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Add FontAwesome and Bootstrap CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+{% endblock footer %}
